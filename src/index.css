@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* font */
+  --font-sans:  ui-sans-serif, system-ui, sans-serif, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-nanumpenscript: 'Nanum Pen Script', cursive;
+  /* tracking */
+  --tracking-tighter: -0.03em;
+  /* color */
+  --color-black:    oklch(0.3044 0.0295 273.63);
+  --color-gray-500: oklch(0.6773 0.0119 274.81);
+  --color-gray-300: oklch(0.8085 0.0071 277.14);
+  --color-gray-50:  oklch(0.9694 0.0011 197.14);
+  --color-white:    oklch(0.9940 0.0000  89.88);
+}
+
+/* semantic classes (font tokens, backgrounds) */
+@layer base {
+  h1 {
+    @apply font-sans
+           font-medium
+           text-4xl
+           text-black
+           tracking-tighter;
+  }
+  h2 {
+    @apply font-sans
+           font-semibold
+           text-lg
+           text-black
+           tracking-tighter;
+  }
+  h3 {
+    @apply font-sans
+           font-medium
+           text-lg
+           text-black
+           leading-[1.2]
+           tracking-tighter;
+  }
+  h4 {
+    @apply font-sans
+           font-medium
+           text-sm
+           text-black
+           tracking-tighter;
+  }
+  p {
+    @apply font-sans
+           font-light
+           text-sm
+           text-black
+           tracking-tighter;
+  }
+  eyebrow {
+    @apply font-sans
+           font-light
+           text-gray-500
+           text-xs;
+  }
+  accent {
+    @apply font-nanumpenscript
+           font-light
+           text-xl
+           tracking-tighter;
+  }
+}
+
+/* semantic classes (components) */
+@layer components {
+}
+
+.bg-grid {
+  background-image:
+    /* horizontal lines */
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.03),
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    /* vertical lines */
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.03),
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+}
+
+::selection {
+  color: var(--color-blue-400);
+}
