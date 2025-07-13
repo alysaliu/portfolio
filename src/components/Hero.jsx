@@ -1,5 +1,8 @@
 import React, {useRef} from 'react'
 import { hover, motion } from 'motion/react'
+import earthImg from '../assets/earth.png'
+import handImg from '../assets/hand.png'
+import brainImg from '../assets/brain.png'
 
 // Animation variants for container and items
 const containerVariants = {
@@ -24,9 +27,9 @@ const Hero = () => {
     const ref = useRef(null);
 
     const values = [
-        { icon: 'src/assets/earth.png',   label: 'systems thinking' },
-        { icon: 'src/assets/hand.png',    label: 'human interaction with tech' },
-        { icon: 'src/assets/brain.png', label: 'product strategy' },
+        { icon: earthImg,   label: 'systems thinking' },
+        { icon: handImg,    label: 'human interaction with tech' },
+        { icon: brainImg,   label: 'product strategy' },
     ]
 
   return (

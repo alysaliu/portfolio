@@ -1,5 +1,14 @@
 // src/components/About.jsx
 import React from 'react'
+import profilePic from '../assets/alysa-profile.png'
+import thumbnail from '../assets/alysathumbnail.png'
+import salesloftLogo from '../assets/Salesloftlogo.png'
+import playbookLogo from '../assets/playbooklogo.jpeg'
+import mastercardLogo from '../assets/mastercardlogo.png'
+import anchorageLogo from '../assets/anchoragelogo.png'
+import kahaniLogo from '../assets/kahani.png'
+import berkeleyLogo from '../assets/berkeleylogo.png'
+
 
 export default function About() {
   return (
@@ -27,7 +36,7 @@ export default function About() {
         {/* Profile photo */}
         <div className="w-full h-full md:w-1/2">
           <img
-            src="src/assets/alysa-profile.png"
+            src={profilePic}
             alt="Alysa smiling at the beach"
             className="h-[300px] w-full rounded-lg shadow-sm object-cover"
           />
@@ -39,7 +48,7 @@ export default function About() {
           {/* Thumbnail container: make relative and group */}
           <div className="relative group w-full md:w-1/2">
             <img
-              src="src/assets/alysathumbnail.png"
+              src={thumbnail}
               alt="video thumbnail"
               className="w-full h-full rounded-lg shadow-sm object-cover"
             />
@@ -65,12 +74,12 @@ export default function About() {
         <h4 className='mb-4'>Experiences</h4>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {[
-            { logo: 'src/assets/Salesloftlogo.png', title: 'Product Designer', subtitle: 'Salesloft (acquired Drift)', dates: '2023–2025' },
-            { logo: 'src/assets/playbooklogo.jpeg', title: 'Lead Product Designer', subtitle: 'Playbook (Contract)', dates: '2023' },
-            { logo: 'src/assets/mastercardlogo.png', title: 'Product Designer', subtitle: 'Mastercard (Contract)', dates: '2022' },
-            { logo: 'src/assets/anchoragelogo.png', title: 'Product Designer', subtitle: 'Anchorage Digital (internship)', dates: '2022' },
-            { logo: 'src/assets//kahani.png', title: 'Lead Product Designer', subtitle: 'Kahani (NPO)', dates: '2022' },
-            { logo: 'src/assets/berkeleylogo.png', title: 'UX Researcher', subtitle: 'UC Berkeley Makerspace', dates: '2021–2022' },
+            { logo: salesloftLogo, title: 'Product Designer', subtitle: 'Salesloft (acquired Drift)', dates: '2023–2025' },
+            { logo: playbookLogo, title: 'Lead Product Designer', subtitle: 'Playbook (Contract)', dates: '2023' },
+            { logo: mastercardLogo, title: 'Product Designer', subtitle: 'Mastercard (Contract)', dates: '2022' },
+            { logo: anchorageLogo, title: 'Product Designer', subtitle: 'Anchorage Digital (internship)', dates: '2022' },
+            { logo: kahaniLogo, title: 'Lead Product Designer', subtitle: 'Kahani (NPO)', dates: '2022' },
+            { logo: berkeleyLogo, title: 'UX Researcher', subtitle: 'UC Berkeley Makerspace', dates: '2021–2022' },
           ].map((exp, i) => (
             <div key={i} className="flex flex-col items-start text-start">
                 <div className="bg-gray-100 border border-gray-200 p-6 rounded-lg mb-4">
