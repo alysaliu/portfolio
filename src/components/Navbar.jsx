@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="bg-white">
       <div className="container max-w-screen-2xl mx-auto px-12 py-4 flex items-center justify-between">
         {/* Logo / Branding */}
-        <div className="p text-black">ALYSA LIU</div>
+        <div className="p text-black"><a href="/work">ALYSA LIU</a></div>
 
         {/* Hamburger (mobile only) */}
         <button 
@@ -35,9 +35,16 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-6 text-sm uppercase">
 
-          <Link to="/work"   className="hover:text-indigo-600">Work</Link>
-          <Link to="/info"   className="hover:text-indigo-600">Info</Link>
-          <Link to="/info" className="hover:text-indigo-600">Resume</Link>
+          <Link to="/work"   className="hover:text-blue-500">Work</Link>
+          <Link to="/info"   className="hover:text-blue-500">Info</Link>
+          <Link
+            to="https://drive.google.com/file/d/1mf6_ypfRXW_pkCfxM0lk-yAxK8lf-3UM/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500"
+          >
+            Resume
+          </Link>
           {/* <Link to="/info"   className="hover:text-indigo-600">Play</Link> */}
         </nav>
 

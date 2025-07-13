@@ -6,7 +6,6 @@ export default function ProjectSection({
   title,
   description,
   imageUrl,
-  hoverImageUrl,
   metrics,
   role,
   contributions,
