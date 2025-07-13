@@ -15,4 +15,4 @@ If you are developing a production application, we recommend using TypeScript wi
 I think i had to do: 
 - npm install ... tailwind?
 - npm install @heroicons/react
-- npm install framer animations (whatever the cli was)
+- npm install motion

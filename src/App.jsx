@@ -1,10 +1,10 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { motion } from 'motion/react'
 import Navbar from './components/Navbar'
-import projects from './data/projects'
-import ProjectSection from './components/ProjectSection'
 import './index.css'
-import Hero from './components/Hero'
+import Work from './components/Work'
+import Info from './components/Info'
 
 const containerVariants = {
   hidden: {},
@@ -18,6 +18,7 @@ const itemVariants = {
 
 export default function App() {
   return (
+    <BrowserRouter>
     <motion.div
       className="bg-white min-h-screen font-sans text-gray-900"
       variants={containerVariants}
@@ -29,36 +30,32 @@ export default function App() {
         <Navbar />
       </motion.div>
 
-      {/* Hero section */}
-      <motion.div variants={itemVariants}>
-        <Hero />
-      </motion.div>
+      <Routes>
+        {/* Landing page */}
+        <Route
+            path="/"
+            element={<Work />}
+        />
 
-      {/* Main content */}
-      <motion.main
-        className="max-w-screen-2xl mx-auto px-8 py-10"
-        variants={itemVariants}
-      >
-        {/* Intro text */}
-        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-4 items-center">
-          <div></div>
-          <p className="text-gray-500 mb-4 ml-6">
-            Selected case studies
-          </p>
-        </motion.div>
+        {/* Work page */}
+        <Route
+            path="/work"
+            element={<Work />}
+        />
 
-        {/* Project sections */}
-        {projects.map((proj) => (
-          <motion.div key={proj.id} variants={itemVariants}>
-            <ProjectSection {...proj} />
-          </motion.div>
-        ))}
-      </motion.main>
+        {/* Info page */}
+        <Route
+            path="/info"
+            element={<Info />}
+        />
+        
+      </Routes>
 
       {/* Footer */}
-      <motion.footer variants={itemVariants} className="bg-white border-t py-6 text-center text-gray-500 text-sm">
+      <motion.footer variants={itemVariants} className="bg-white border-gray-500 py-6 text-center text-gray-500 text-sm font-light">
         © 2025 Alysa Liu. All rights reserved. Built with React + Tailwind.
       </motion.footer>
     </motion.div>
+    </BrowserRouter>
   )
 }

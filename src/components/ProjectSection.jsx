@@ -23,7 +23,7 @@ export default function ProjectSection({
   return (
     <section className="flex flex-col md:flex-row mb-16 gap-8">
       {/* Text side */}
-      <div className="flex flex-col w-full md:w-1/4 p-4 gap-8 pt-4 lg:pt-32">
+      <div className="flex flex-col w-full md:w-1/4 p-4 gap-8 pt-4">
         <div className="flex flex-col gap-3">
           <p className="text-gray-500">{year}</p>
           <h3>{title}</h3>
@@ -65,34 +65,28 @@ export default function ProjectSection({
         </div>
       </div>
 
-      {/* Image side */}
+{/* Image side */}
 <div className="w-full md:w-3/4">
   <div className="relative group w-full overflow-hidden rounded-sm">
     {/* default image */}
     <img
       src={imageUrl}
       alt={title}
-      className="w-full object-cover transition-opacity duration-800 ease-in-out group-hover:opacity-0"
-    />
-
-    {/* hover image */}
-    <img
-      src={hoverImageUrl}
-      alt={`${title} hover`}
-      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-800 ease-in-out group-hover:opacity-100"
+      className="w-full object-cover"
     />
 
     {/* centered CTA button */}
     <a
-      href="/case-study"
+      href="/work"
       className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
     >
-      <span className="px-4 py-2 bg-black bg-opacity-60 text-white rounded">
-        Read case study
+      <span className="px-4 py-2 bg-black bg-opacity-60 text-white rounded-xl">
+        Case study coming soon
       </span>
     </a>
   </div>
 </div>
+
     </section>
   );
 }

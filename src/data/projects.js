@@ -18,14 +18,14 @@ const projects = [
         year: 2024,
         title: 'Salesloft—strike intent while it’s hot',
         description: `High-volume SDRs struggle with prioritizing outreach after buyers engage. 
-            I identified opportunities to clarify mental models in Salesloft and drive adoption 
+            I identified opportunities to improve the UX of Live feed in Salesloft and drive adoption 
             for our flagship product, Rhythm.`,
         imageUrl: 'src/assets/livefeedmobile-1.png',
         hoverImageUrl: 'src/assets/livefeed-blurry.png',
         metrics: 'All-time high CSAT score, which continues to rise.',
         role: 'Lead Product Designer, owned discovery through launch.',
         contributions: 'UX research, wireframes, hi-fi mocks, prototyping, and user testing.',
-        timeline: 'Jan 2024 – Jun 2024',
+        timeline: 'Aug 2024 – Dec 2024',
       },
       {
         id: 'playbook',
@@ -34,22 +34,22 @@ const projects = [
         description: `Client handoffs and portfolio creation is a time consuming and generic process for creatives. My team and I added customization for users to create branded website in just a few clicks. Over 61k websites have been created with the feature we designed. `,
         imageUrl: 'src/assets/playbooktablet.jpeg',
         hoverImageUrl: 'src/assets/rhythm-desktop-1.png',
-        metrics: 'All-time high CSAT score, which continues to rise.',
-        role: 'Lead Product Designer, owned discovery through launch.',
-        contributions: 'UX research, wireframes, hi-fi mocks, prototyping, and user testing.',
-        timeline: 'Jan 2024 – Jun 2024',
+        metrics: '61k users',
+        role: 'Lead Product Designer, guided team of 5 product designers to develop design proposals for Playbook team.',
+        contributions: 'UX research, wireframes, hi-fi mocks, prototyping.',
+        timeline: 'Feb 2023 – May 2023',
       },
       {
         id: 'lore',
-        year: 2023,
+        year: 2025,
         title: 'Lore—experience TV shows and movies with friends',
-        description: `Imagine if Letterboxd, Serializd, and Beli had a baby. This is a personal project that my friends and I use to stay connected. `,
-        imageUrl: 'src/assets/playbooktablet.jpeg',
+        description: `Imagine if Letterboxd, Serializd, and Beli had a baby. This is a personal project that my friends and I use to stay connected. Check it out at https://lore-chi.vercel.app! `,
+        imageUrl: 'src/assets/Lore.png',
         hoverImageUrl: 'src/assets/rhythm-desktop-1.png',
-        metrics: 'All-time high CSAT score, which continues to rise.',
-        role: 'Lead Product Designer, owned discovery through launch.',
+        metrics: 'Released MVP to 4 beta testers',
+        role: 'Lead Product Designer, owned discovery through launch. I worked with 3 other team members to develop the concept.',
         contributions: 'UX research, wireframes, hi-fi mocks, prototyping, and user testing.',
-        timeline: 'Jan 2024 – Jun 2024',
+        timeline: 'Nov 2024 – Jun 2025',
       }
     // …add more projects here
   ];

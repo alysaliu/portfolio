@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { MenuIcon, XIcon, ChevronDownIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
+
 
 export default function Navbar() {
   const [isNavOpen,   setIsNavOpen]   = useState(false)
@@ -32,40 +34,12 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-6 text-sm uppercase">
-  <div
-    className="relative"
-    onMouseEnter={() => setIsWorkOpen(true)}
-    onMouseLeave={() => setIsWorkOpen(false)}
-  >
-    <button className="flex items-center space-x-1 hover:text-indigo-600">
-      <span>WORK</span>
-      <ChevronDownIcon
-        className={`w-4 h-4 transition-transform duration-500 ease-in-out ${isWorkOpen ? 'rotate-180' : ''}`}
-      />
-    </button>
 
-    {isWorkOpen && (
-      <ul
-        className="absolute left-0 top-full mt-2 bg-white rounded shadow-lg text-gray-800"
-        onMouseEnter={() => setIsWorkOpen(true)}
-        onMouseLeave={() => setIsWorkOpen(false)}
-      >
-        {projects.map(p => (
-          <li key={p.name}>
-            <a href={p.href} className="block px-4 py-2 hover:bg-gray-100">
-              {p.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
-
-  <a href="#info"   className="hover:text-indigo-600">Info</a>
-  <a href="#resume" className="hover:text-indigo-600">Resume</a>
-  <a href="#play"   className="hover:text-indigo-600">Play</a>
-</nav>
-
+          <Link to="/work"   className="hover:text-indigo-600">Work</Link>
+          <Link to="/info"   className="hover:text-indigo-600">Info</Link>
+          <Link to="/info" className="hover:text-indigo-600">Resume</Link>
+          {/* <Link to="/info"   className="hover:text-indigo-600">Play</Link> */}
+        </nav>
 
       </div>
 
@@ -95,7 +69,7 @@ export default function Navbar() {
             </li>
             <li><a href="#info"   className="block py-2 hover:text-indigo-600">Info</a></li>
             <li><a href="#resume" className="block py-2 hover:text-indigo-600">Resume</a></li>
-            <li><a href="#play"   className="block py-2 hover:text-indigo-600">Play</a></li>
+            {/* <li><a href="#play"   className="block py-2 hover:text-indigo-600">Play</a></li> */}
           </ul>
         </nav>
       )}

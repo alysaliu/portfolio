@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, {useRef} from 'react'
+import { hover, motion } from 'motion/react'
 
 // Animation variants for container and items
 const containerVariants = {
@@ -21,11 +21,13 @@ const itemVariants = {
 }
 
 const Hero = () => {
-  const values = [
-    { icon: 'src/assets/earth.png',   label: 'systems thinking' },
-    { icon: 'src/assets/hand.png',    label: 'human interaction with tech' },
-    { icon: 'src/assets/handshake.png', label: 'product strategy' },
-  ]
+    const ref = useRef(null);
+
+    const values = [
+        { icon: 'src/assets/earth.png',   label: 'systems thinking' },
+        { icon: 'src/assets/hand.png',    label: 'human interaction with tech' },
+        { icon: 'src/assets/brain.png', label: 'product strategy' },
+    ]
 
   return (
     <motion.section
@@ -33,6 +35,7 @@ const Hero = () => {
       variants={containerVariants}
       initial="hidden"
       animate="show"
+      ref={ref}
     >
       <motion.div
         className="flex flex-col md:flex-row gap-8"
@@ -45,11 +48,11 @@ const Hero = () => {
         <motion.div className="flex flex-col w-full md:w-3/4" variants={itemVariants}>
             {/* Intro copy */}
             <motion.div className="space-y-4" variants={itemVariants}>
-            <h1 className="">Alysa Liu</h1>
+            <h1 className=""> Alysa Liu helps people focus on the more important things in life.</h1>
 
-            <h4 className="">
-                designs tools that give people time to focus on more important things in life.
-            </h4>
+            {/* <h3 className="">
+                
+            </h3> */}
 
             <div className="text-gray-500 leading-tight">
                 <span className='font-sans font-light text-sm text-gray-500 tracking-tighter'>Currently </span>
@@ -71,7 +74,7 @@ const Hero = () => {
                     variants={itemVariants}
                 >
                     <div className="p-1 bg-white rounded-full border border-gray-200 shadow-sm w-16 h-16 flex items-center justify-center flex-shrink-0">
-                    <img
+                    <motion.img
                         src={icon}
                         alt={label}
                         className="max-w-full max-h-full object-contain"
