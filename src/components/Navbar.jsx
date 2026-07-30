@@ -18,7 +18,10 @@ export default function Navbar() {
     <header className="bg-white">
       <div className="container max-w-screen-2xl mx-auto px-12 py-4 flex items-center justify-between">
         {/* Logo / Branding */}
-        <div className="p text-black">ALYSA LIU</div>
+        <div className="p text-black flex items-center gap-2">
+          <img src="/favicon.png" alt="" className="w-6 h-6 object-contain" />
+          ALYSA LIU
+        </div>
 
         {/* Hamburger (mobile only) */}
         <button 

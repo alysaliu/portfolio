@@ -66,23 +66,12 @@ export default function ProjectSection({
 
 {/* Image side */}
 <div className="w-full md:w-3/4">
-  <div className="relative group w-full overflow-hidden rounded-sm">
-    {/* default image */}
+  <div className="w-full overflow-hidden rounded-sm">
     <img
       src={imageUrl}
       alt={title}
       className="w-full object-cover"
     />
-
-    {/* centered CTA button */}
-    <a
-      href="/work"
-      className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-    >
-      <span className="px-4 py-2 bg-black bg-opacity-60 text-white rounded-xl">
-        Case study coming soon
-      </span>
-    </a>
   </div>
 </div>
 
