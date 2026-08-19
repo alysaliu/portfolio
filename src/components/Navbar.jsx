@@ -15,12 +15,11 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="bg-white">
+    <header className="bg-cream">
       <div className="container max-w-screen-2xl mx-auto px-12 py-4 flex items-center justify-between">
         {/* Logo / Branding */}
         <div className="p text-black flex items-center gap-2">
-          <img src="/favicon.png" alt="" className="w-6 h-6 object-contain" />
-          ALYSA LIU
+          <img src="/red-mark.png" alt="Alysa Liu" className="h-5 w-auto object-contain" />
         </div>
 
         {/* Hamburger (mobile only) */}
@@ -55,7 +54,7 @@ export default function Navbar() {
 
       {/* Mobile nav */}
       {isNavOpen && (
-        <nav className="md:hidden bg-white border-t">
+        <nav className="md:hidden bg-cream border-t">
           <ul className="space-y-1 p-4 text-sm uppercase">
             <li>
               <button

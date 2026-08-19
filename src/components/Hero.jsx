@@ -7,17 +7,18 @@ const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.1,
+      delayChildren: 0.2,
+      staggerChildren: 0.3,
     },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 1.2, ease: 'easeOut' },
   },
 }
 
@@ -26,7 +27,7 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="relative bg-white max-w-screen-2xl mx-auto px-12 py-[180px] overflow-hidden"
+      className="relative bg-cream max-w-screen-2xl mx-auto px-12 py-[180px] overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="show"
@@ -34,27 +35,30 @@ const Hero = () => {
     >
       <GridReveal />
       <motion.div
-        className="relative z-10 flex flex-col md:flex-row gap-8"
-        variants={itemVariants}
+        className="relative z-10 flex flex-col items-center text-center gap-8"
+        variants={containerVariants}
       >
-        {/* Spacer */}
-        <motion.div className="flex flex-col w-full md:w-1/4" variants={itemVariants}>
+        {/* Name lockup: red mark + display name */}
+        <motion.div className="flex items-center justify-center gap-4 md:gap-6" variants={itemVariants}>
+          <img
+            src="/red-mark.png"
+            alt=""
+            aria-hidden="true"
+            className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain"
+          />
+          <h1 className="font-newspirit font-normal text-black leading-none tracking-tight text-6xl sm:text-7xl md:text-8xl lg:text-[200px]">
+            Alysa Liu
+          </h1>
         </motion.div>
-        {/* Content */}
-        <motion.div className="flex flex-col w-full md:w-3/4" variants={itemVariants}>
-            {/* Intro copy */}
-            <motion.div className="space-y-4" variants={itemVariants}>
-            <h1 className=""> Alysa Liu designs AI tools that take the busywork out of complex, high-stakes work — so people can focus on the decisions that matter.</h1>
 
-            <p className="text-lg text-gray-700">Senior product designer who ships code and owns product decisions. Took Supio's data-extraction flow from days→minutes and drove &gt;20% lift in DAU/WAU. Obsessed with craft, taste, and details users feel.</p>
-
-            </motion.div>
-        </motion.div>
-
-        </motion.div>
-        
-
-        <motion.div variants={itemVariants} />
+        {/* Tagline */}
+        <motion.p
+          className="max-w-3xl font-sans font-light text-lg md:text-xl text-black tracking-tighter"
+          variants={itemVariants}
+        >
+          Product designer who ships code and owns product decisions. Obsessed with craft, taste, and details users feel.
+        </motion.p>
+      </motion.div>
 
     </motion.section>
   )

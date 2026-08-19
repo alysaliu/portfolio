@@ -7,8 +7,8 @@ import { useEffect, useRef, useState } from 'react'
 export default function GridReveal({
   cell = 24,
   radius = 200,
-  lineColor = '#e9ebef',
-  bgColor = '#ffffff',
+  lineColor = '#d6d2c4',
+  bgColor = '#f0efe9',
 }) {
   const rootRef = useRef(null)
   const target = useRef({ x: -9999, y: -9999 })

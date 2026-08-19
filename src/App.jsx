@@ -20,7 +20,7 @@ export default function App() {
   return (
     <BrowserRouter>
     <motion.div
-      className="bg-white min-h-screen font-sans text-gray-900"
+      className="bg-cream min-h-screen font-sans text-gray-900"
       variants={containerVariants}
       initial="hidden"
       animate="show"
@@ -52,7 +52,7 @@ export default function App() {
       </Routes>
 
       {/* Footer */}
-      <motion.footer variants={itemVariants} className="bg-white border-gray-500 py-6 text-center text-gray-500 text-sm font-light">
+      <motion.footer variants={itemVariants} className="bg-cream border-gray-500 py-6 text-center text-gray-500 text-sm font-light">
         © 2025 Alysa Liu. All rights reserved. Built with React + Tailwind.
       </motion.footer>
     </motion.div>

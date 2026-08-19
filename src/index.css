@@ -1,9 +1,55 @@
 @import "tailwindcss";
 
+/* PP Editorial Old (self-hosted) */
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-ultralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-ultralightitalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-ultrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-ultrabolditalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme {
   /* font */
   --font-sans:  ui-sans-serif, system-ui, sans-serif, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-nanumpenscript: 'Nanum Pen Script', cursive;
+  --font-editorial: 'PP Editorial Old', serif;
+  --font-newspirit: 'new-spirit-condensed', serif;
   /* tracking */
   --tracking-tighter: -0.03em;
   /* color */
@@ -12,6 +58,7 @@
   --color-gray-300: oklch(0.8085 0.0071 277.14);
   --color-gray-50:  oklch(0.9694 0.0011 197.14);
   --color-white:    oklch(0.9940 0.0000  89.88);
+  --color-cream:    #f0efe9;
 }
 
 /* semantic classes (font tokens, backgrounds) */
