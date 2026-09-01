@@ -38,14 +38,8 @@ const Hero = () => {
         className="relative z-10 flex flex-col items-center text-center gap-8"
         variants={containerVariants}
       >
-        {/* Name lockup: red mark + display name */}
-        <motion.div className="flex items-center justify-center gap-4 md:gap-6" variants={itemVariants}>
-          <img
-            src="/red-mark.png"
-            alt=""
-            aria-hidden="true"
-            className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain"
-          />
+        {/* Name lockup: display name */}
+        <motion.div className="flex items-center justify-center" variants={itemVariants}>
           <h1 className="font-newspirit font-normal text-black leading-none tracking-tight text-6xl sm:text-7xl md:text-8xl lg:text-[200px]">
             Alysa Liu
           </h1>
